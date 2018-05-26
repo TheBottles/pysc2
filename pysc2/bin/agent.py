@@ -45,7 +45,7 @@ flags.DEFINE_integer("rgb_minimap_size", None,
 flags.DEFINE_enum("action_space", None, sc2_env.ActionSpace._member_names_,  # pylint: disable=protected-access
                   "Which action space to use. Needed if you take both feature "
                   "and rgb observations.")
-flags.DEFINE_bool("use_feature_units", False,
+flags.DEFINE_bool("use_feature_units", True,
                   "Whether to include feature units.")
 
 flags.DEFINE_integer("max_agent_steps", 0, "Total agent steps.")
