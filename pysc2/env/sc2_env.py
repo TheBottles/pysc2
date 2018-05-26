@@ -245,10 +245,10 @@ class SC2Env(environment.Base):
     if save_replay_episodes and not replay_dir:
       raise ValueError("Missing replay_dir")
 
-    if map_inst.players and num_players > map_inst.players:
-      raise ValueError(
-          "Map only supports %s players, but trying to join with %s" % (
-              map_inst.players, num_players))
+    # if map_inst.players and num_players > map_inst.players:
+    #   raise ValueError(
+    #       "Map only supports %s players, but trying to join with %s" % (
+    #           map_inst.players, num_players))
 
     self._discount = discount
     self._step_mul = step_mul or map_inst.step_mul
